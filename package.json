@@ -1,0 +1,31 @@
+{
+  "name": "node-server-template",
+  "version": "0.0.1",
+  "description": "a basic template setup for node projects",
+  "main": "index.js",
+  "scripts": {
+    "start:prod": "node lib\\index.js",
+    "build": "babel src -d lib",
+    "start:dev": "nodemon --exec npm run babel-node -- src\\index.js",
+    "start": "npm run start:dev",
+    "test": "jest --watch",
+    "babel-node": "babel-node"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.js?$": "babel-jest"
+    }
+  },
+  "author": "MichaelR",
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "^4.17.10"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-jest": "^23.4.0",
+    "babel-preset-env": "^1.7.0",
+    "jest": "^23.3.0",
+    "nodemon": "^1.17.5"
+  }
+}

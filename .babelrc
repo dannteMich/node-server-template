@@ -1,0 +1,9 @@
+{
+    "presets": [
+        ["env", {
+            "targerts": {
+                "node": "current"
+            }
+        }]
+    ]
+}
